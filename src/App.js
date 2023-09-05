@@ -35,18 +35,19 @@ function App() {
       <header className="titulo">
         <h1>Sua Lista de Tarefas</h1>
       </header>
-      <div>
-        <input type="text" name="Tarefas" placeholder="Adicionar Tarefa" value={tarefa.texto} onChange={ (e) => setTarefa( { id: Math.random(), texto: e.target.value, status: false} ) }/>
-        <button onClick={AddTarefa}>Adicionar</button>
+      <div className="pesquisa">
+        <input className="Caixa-texto" type="text" name="Tarefas" placeholder="Adicionar Tarefa" value={tarefa.texto} onChange={ (e) => setTarefa( { id: Math.random(), texto: e.target.value, status: false} ) }/>
+        <button className="AddBotao" onClick={AddTarefa}>Adicionar</button>
       </div>
       <div>
-        <ul>
+        <ul className="Lista">
           {listaTarefas.map( (item, index ) => (
-            <li key={item.id}>{item.texto} <button onClick={ () => StatusTarefa(item.id, item.status) }>{item.status ? 'Concluido' : 'Não Concluido' }</button> <button onClick={ () => ExcluirTarefa(item.id) }>Excluir</button></li>
+            <li className={item.status ? 'Ativo' : 'Cancelar'} key={item.id}>{item.texto} <i className={item.status ? 'fa fa-square-o' : 'fa fa-check-square-o'}   aria-hidden="true" onClick={ () => StatusTarefa(item.id, item.status) }></i> <i class="fa fa-trash" aria-hidden="true" onClick={ () => ExcluirTarefa(item.id) }></i></li>
           ))}
+           <button className="Final">Finalizar</button>
         </ul>
       </div>
     </>
   );
-}
+} 
 export default App;

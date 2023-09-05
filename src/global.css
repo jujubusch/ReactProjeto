@@ -5,3 +5,52 @@ body {
     text-align: center;
     font-size: 20px;
 }
+.Lista {
+    background-color: #93f2ff;
+    list-style-type: none;
+    width: 60%;
+    margin-top: 10%;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.Ativo {
+    text-decoration: line-through;
+}
+.botoes {
+    margin-left: 10%;
+}
+.pesquisa{
+    width: 100%;
+    text-align: center;
+}
+.pesquisa button{
+    margin: 0 auto;
+}
+.Caixa-texto {
+    margin-top: 5%;
+    width: 40%;
+    height: 50px;
+    font-size: 22px;
+    background-color: rgb(242, 180, 255);
+    border-radius: 7px;
+}
+.AddBotao {
+    display: block;
+
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #bee9ff;
+    border-radius: 30px;
+}
+.Final{
+    background-color: #CB97FF;
+    margin-left: 46%;
+    width: 85px;
+    height: 60px;
+    margin-top: 10%;
+    border-radius: 10px;
+    font-size: 17px;
+}
